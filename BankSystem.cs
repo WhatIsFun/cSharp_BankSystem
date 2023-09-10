@@ -70,7 +70,7 @@ namespace cSharp_BankSystem
             // Find the user with the provided email.
             loggedInUser = users.FirstOrDefault(u => u.Email == email);
 
-            // Check if the user exists and the password matches (you should compare hashed passwords here).
+            // Check if the user exists and the password matches.
             if (loggedInUser != null && loggedInUser.HashedPassword == password)
             {
                 return true; // Login successful.
@@ -231,7 +231,7 @@ namespace cSharp_BankSystem
             Console.WriteLine($"Deposited {amount} OMR into account {accountNumber}. New balance: {account.Balance} OMR");
             account.TransactionHistory.Add(new Transaction
             {
-                TransactionType = "Deposit",
+                Type = TransactionType.Deposit,
                 Amount = amount,
                 Timestamp = DateTime.Now
             });
@@ -274,7 +274,7 @@ namespace cSharp_BankSystem
             Console.WriteLine($"Withdrawn {amount} OMR from account {accountNumber}. New balance: {account.Balance} OMR");
             account.TransactionHistory.Add(new Transaction
             {
-                TransactionType = "Withdrawal",
+                Type = TransactionType.Withdrawal,
                 Amount = amount,
                 Timestamp = DateTime.Now
             });
@@ -340,7 +340,7 @@ namespace cSharp_BankSystem
                 Console.WriteLine("Target account not found.");
                 return;
             }
-            Console.WriteLine($"Account holder name:{0}\nAccount number: {1}",targetAccount.AccountHolderName, targetAccount.AccountNumber);
+            Console.WriteLine("Account holder name: {0}\nAccount number: {1}",targetAccount.AccountHolderName, targetAccount.AccountNumber);
             Console.Write("Enter the amount to transfer: ");
             if (!decimal.TryParse(Console.ReadLine(), out decimal amount) || amount <= 0)
             {
@@ -356,23 +356,24 @@ namespace cSharp_BankSystem
             sourceAccount.Balance -= amount;
             targetAccount.Balance += amount;
 
-            SaveUserData(); // Save the updated user data to the JSON file
+            //SaveUserData(); // Save the updated user data to the JSON file
 
             Console.WriteLine($"Transferred {amount} OMR from account {sourceAccountNumber} to account {targetAccountNumber}.");
             Console.WriteLine($"Source account balance: {sourceAccount.Balance} OMR");
             sourceAccount.TransactionHistory.Add(new Transaction
             {
-                TransactionType = "Transfer (To)",
+                Type = TransactionType.Transfer,
                 Amount = amount,
                 Timestamp = DateTime.Now
             });
 
             targetAccount.TransactionHistory.Add(new Transaction
             {
-                TransactionType = "Transfer (From)",
+                Type = TransactionType.Transfer,
                 Amount = amount,
                 Timestamp = DateTime.Now
             });
+            SaveUserData();
             return;
         }
         public void GetAccountHistory()
@@ -398,7 +399,7 @@ namespace cSharp_BankSystem
             Console.WriteLine($"Transaction History for Account {accountNumber}:");
             foreach (var transaction in account.TransactionHistory)
             {
-                Console.WriteLine($"Type: {transaction.TransactionType}, Amount: {transaction.Amount} OMR, Date: {transaction.Timestamp}");
+                Console.WriteLine($"Type: {transaction.Type}, Amount: {transaction.Amount} OMR, Date: {transaction.Timestamp}");
             }
         }
         private Account GetAccountByNumber(int accountNumber)
@@ -421,12 +422,14 @@ namespace cSharp_BankSystem
                 {
                     string userDataJson = File.ReadAllText(userDataFile);
                     users = JsonSerializer.Deserialize<List<User>>(userDataJson);
+
                 }
                 else
                 {
                     // Create a new user list if the file doesn't exist.
                     users = new List<User>();
                 }
+                Console.WriteLine("Data loaded successfully!");
             }
             catch (IOException ex)
             {

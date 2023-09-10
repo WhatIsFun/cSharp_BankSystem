@@ -15,16 +15,22 @@ namespace cSharp_BankSystem
         public string HashedPassword { get; set; }
         public List<Account> Accounts { get; set; }
 
-        public User(string name, string email, string password)
+        public User()
+        {
+            Accounts = new List<Account>();
+        }
+
+        public User(string name, string email, string hashedPassword)
         {
             Name = name;
             Email = email;
-            HashedPassword = HashPassword(password);
+            HashedPassword = hashedPassword;
             Accounts = new List<Account>();
         }
 
         private string HashPassword(string password)
         {
+            //return password;
             return BCrypt.Net.BCrypt.HashPassword(password);
         }
     }

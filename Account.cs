@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
+using System.Transactions;
 
 
 namespace cSharp_BankSystem
@@ -17,16 +18,17 @@ namespace cSharp_BankSystem
         public List<Transaction> TransactionHistory { get; private set; }
 
 
-        public Account(int accountNumber, string accountHolderName, decimal initialBalance)
+        public Account()
+        {
+            TransactionHistory = new List<Transaction>();
+        }
+
+        public Account(int accountNumber, string accountHolderName, decimal balance)
         {
             AccountNumber = accountNumber;
             AccountHolderName = accountHolderName;
-            Balance = initialBalance;
+            Balance = balance;
             TransactionHistory = new List<Transaction>();
-        }
-        public string ToJson()
-        {
-            return JsonSerializer.Serialize(this);
         }
     }
 }

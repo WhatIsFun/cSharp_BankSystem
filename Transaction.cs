@@ -8,8 +8,32 @@ namespace cSharp_BankSystem
 {
     public class Transaction
     {
-        public string TransactionType { get; set; }
-        public decimal Amount { get; set; }
+        public int TransactionId { get; set; }
         public DateTime Timestamp { get; set; }
+        public TransactionType Type { get; set; }
+        public decimal Amount { get; set; }
+        public int SourceAccountNumber { get; set; }
+        public int TargetAccountNumber { get; set; }
+
+        public Transaction()
+        {
+        }
+
+        public Transaction(int transactionId, DateTime timestamp, TransactionType type, decimal amount, int sourceAccountNumber, int targetAccountNumber)
+        {
+            TransactionId = transactionId;
+            Timestamp = timestamp;
+            Type = type;
+            Amount = amount;
+            SourceAccountNumber = sourceAccountNumber;
+            TargetAccountNumber = targetAccountNumber;
+        }
+    }
+
+    public enum TransactionType
+    {
+        Deposit,
+        Withdrawal,
+        Transfer
     }
 }

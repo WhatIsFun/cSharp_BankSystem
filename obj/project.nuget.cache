@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "J4OBHwSEQjLA/ymQ8VWh0hnB9o/tX90i/sNrRikH8KBeGpPX4WQ90SPztyuyGjetBVGBfvz6tldSjhwKfyVZyw==",
+  "dgSpecHash": "J1xzTwZ3EEvsgnaF80ipWwaZueYjdTODDPUHI6Hubwvo68Fh0WfyLUWL64GNSoi1akALeC8ThkZdmxSIwSwUog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\code-TRA\\git-starter\\cSharp_BankSystem\\cSharp_BankSystem.csproj",
+  "projectFilePath": "C:\\Users\\moham\\source\\repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+    "C:\\Users\\moham\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.21\\microsoft.windowsdesktop.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.21\\microsoft.netcore.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.21\\microsoft.aspnetcore.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.21\\microsoft.netcore.app.host.win-x64.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }
