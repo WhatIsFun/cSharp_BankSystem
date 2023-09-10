@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "J4OBHwSEQjLA/ymQ8VWh0hnB9o/tX90i/sNrRikH8KBeGpPX4WQ90SPztyuyGjetBVGBfvz6tldSjhwKfyVZyw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\code-TRA\\git-starter\\cSharp_BankSystem\\cSharp_BankSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

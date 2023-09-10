@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\bin\Debug\net6.0\cSharp_BankSystem.exe
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\bin\Debug\net6.0\cSharp_BankSystem.deps.json
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\bin\Debug\net6.0\cSharp_BankSystem.runtimeconfig.json
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\bin\Debug\net6.0\cSharp_BankSystem.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\bin\Debug\net6.0\cSharp_BankSystem.pdb
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.AssemblyInfo.cs
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\refint\cSharp_BankSystem.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.pdb
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.genruntimeconfig.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\ref\cSharp_BankSystem.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\code-TRA\git-starter\cSharp_BankSystem\obj\Debug\net6.0\cSharp_BankSystem.csproj.CopyComplete
