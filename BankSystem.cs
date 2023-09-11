@@ -17,8 +17,7 @@ namespace cSharp_BankSystem
         private User loggedInUser;
         private string userDataDirectory = "Bank System";
         private string userDataFile = "Bank System/users.json"; // Folder to store user data called 'Bank System'
-        private readonly HttpClient httpClient = new HttpClient();
-        private const string ExchangeRateApiUrl = "https://v6.exchangerate-api.com/v6/2d8754c1bf6d68b8bbea954d/latest/USD";
+        
         public BankSystem()
         {
             users = new List<User>();
@@ -40,30 +39,19 @@ namespace cSharp_BankSystem
         }
         static async Task ViewExchangeRates()
         {
-            Console.WriteLine("Exchange Rates:");
+            ExchangeRateService exchangeRateService = new ExchangeRateService();
+            ExchangeRateData exchangeRates = await exchangeRateService.GetExchangeRatesAsync();
+
+            if (exchangeRates != null)
+            {
+                Console.WriteLine($"Base Currency: {exchangeRates.base_code}");
+                Console.WriteLine("Exchange Rates:");
+                foreach (var conversion_rates in exchangeRates.conversion_rates)
+                {
+                    Console.WriteLine($"{conversion_rates.Key}: {conversion_rates.Value}");
+                }
+            }
             return;
-            //try
-            //{
-            //    HttpResponseMessage response = await httpClient.GetAsync(ExchangeRateApiUrl);
-
-            //    if (response.IsSuccessStatusCode)
-            //    {
-            //        string responseBody = await response.Content.ReadAsStringAsync();
-
-            //        string exchangeRateData = JsonConvert.DeserializeObject<ExchangeRateData>(responseBody);
-
-            //        Console.WriteLine("Exchange Rates (USD as base currency):");
-            //        foreach (var currency in exchangeRateData.Rates)
-            //        {
-            //            Console.WriteLine($"{currency.Key}: {currency.Value}");
-            //        }
-            //    }
-            //}
-            //catch (HttpRequestException)
-            //{
-            //    Console.WriteLine("Failed to retrieve exchange rates. Please try again later.");
-            //    return;
-            //}
         }
         public bool Login(string email, string password)
         {
@@ -187,7 +175,7 @@ namespace cSharp_BankSystem
 
         public void UserAccounts()
         {
-            Console.WriteLine($"Accounts for user: {loggedInUser.Name}");
+            Console.WriteLine($"Accounts for user: {loggedInUser.Name}"); 
             foreach (var account in loggedInUser.Accounts)
             {
                 Console.WriteLine($"Account Number: {account.AccountNumber}");
@@ -457,8 +445,6 @@ namespace cSharp_BankSystem
                 Console.WriteLine($"Error serializing user data: {ex.Message}");
             }
         }
-        
-        
     }
 
 }
