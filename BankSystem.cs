@@ -39,19 +39,32 @@ namespace cSharp_BankSystem
         }
         static async Task ViewExchangeRates()
         {
+            Console.WriteLine("Welcome to Exchange Rate Service\n\n\r\n" +
+                "E.g:\n" +
+                "Currency Code  Currency Name\n" +
+                "OMR            Omani Rial\n" +
+                "AED            UAE Dirham\n" +
+                "USD            United States Dollar\n" +
+                "EUR            Euro\n");
+            Console.WriteLine("Enter the base currency: ");
+            string Base = Console.ReadLine();
+            Console.WriteLine("Enter the exchange currency: ");
+            string exchangeTo = Console.ReadLine();
             ExchangeRateService exchangeRateService = new ExchangeRateService();
-            ExchangeRateData exchangeRates = await exchangeRateService.GetExchangeRatesAsync();
+            ExchangeRateData exchangeRates = await exchangeRateService.GetExchangeRatesAsync(Base, exchangeTo);
 
             if (exchangeRates != null)
             {
                 Console.WriteLine($"Base Currency: {exchangeRates.base_code}");
+                Console.WriteLine($"Target Currency: {exchangeRates.target_code}");
                 Console.WriteLine("Exchange Rates:");
-                foreach (var conversion_rates in exchangeRates.conversion_rates)
+                foreach (var conversion_rate in exchangeRates.conversion_rate)
                 {
-                    Console.WriteLine($"{conversion_rates.Key}: {conversion_rates.Value}");
+                    Console.Write($"{conversion_rate}");
                 }
             }
-            return;
+            
+               
         }
         public bool Login(string email, string password)
         {

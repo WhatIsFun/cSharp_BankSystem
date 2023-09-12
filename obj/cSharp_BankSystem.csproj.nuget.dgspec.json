@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Source\\Repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj": {}
+    "C:\\Users\\user\\source\\repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Source\\Repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj": {
+    "C:\\Users\\user\\source\\repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj",
         "projectName": "cSharp_BankSystem",
-        "projectPath": "C:\\Users\\user\\Source\\Repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\cSharp_BankSystem\\cSharp_BankSystem.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\user\\Source\\Repos\\cSharp_BankSystem\\obj\\",
         "projectStyle": "PackageReference",

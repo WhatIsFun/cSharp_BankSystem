@@ -1,1 +1,71 @@
-[{"Name":"omar","Email":"omar12","HashedPassword":"omar12","Accounts":[{"AccountNumber":7597,"AccountHolderName":"omar","Balance":70,"TransactionHistory":[]},{"AccountNumber":4863,"AccountHolderName":"omar","Balance":80,"TransactionHistory":[]}]},{"Name":"mohd","Email":"mohd","HashedPassword":"mohd1","Accounts":[{"AccountNumber":866,"AccountHolderName":"mohd","Balance":200,"TransactionHistory":[{"TransactionId":0,"Timestamp":"2023-09-11T09:00:24.5418552+04:00","Type":2,"Amount":100,"SourceAccountNumber":0,"TargetAccountNumber":0}]},{"AccountNumber":2840,"AccountHolderName":"mohd","Balance":100,"TransactionHistory":[{"TransactionId":0,"Timestamp":"2023-09-11T09:00:24.537837+04:00","Type":2,"Amount":100,"SourceAccountNumber":0,"TargetAccountNumber":0}]}]},{"Name":"","Email":"","HashedPassword":"","Accounts":[{"AccountNumber":450,"AccountHolderName":"","Balance":150,"TransactionHistory":[]}]}]
+[
+  {
+    "Name": "omar",
+    "Email": "omar12",
+    "HashedPassword": "omar12",
+    "Accounts": [
+      {
+        "AccountNumber": 7597,
+        "AccountHolderName": "omar",
+        "Balance": 70,
+        "TransactionHistory": []
+      },
+      {
+        "AccountNumber": 4863,
+        "AccountHolderName": "omar",
+        "Balance": 80,
+        "TransactionHistory": []
+      }
+    ]
+  },
+  {
+    "Name": "mohd",
+    "Email": "mohd",
+    "HashedPassword": "mohd1",
+    "Accounts": [
+      {
+        "AccountNumber": 866,
+        "AccountHolderName": "mohd",
+        "Balance": 200,
+        "TransactionHistory": [
+          {
+            "TransactionId": 0,
+            "Timestamp": "2023-09-11T09:00:24.5418552+04:00",
+            "Type": 2,
+            "Amount": 100,
+            "SourceAccountNumber": 0,
+            "TargetAccountNumber": 0
+          }
+        ]
+      },
+      {
+        "AccountNumber": 2840,
+        "AccountHolderName": "mohd",
+        "Balance": 100,
+        "TransactionHistory": [
+          {
+            "TransactionId": 0,
+            "Timestamp": "2023-09-11T09:00:24.537837+04:00",
+            "Type": 2,
+            "Amount": 100,
+            "SourceAccountNumber": 0,
+            "TargetAccountNumber": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Accounts": [
+      {
+        "AccountNumber": 450,
+        "AccountHolderName": "",
+        "Balance": 150,
+        "TransactionHistory": []
+      }
+    ],
+    "Email": "",
+    "HashedPassword": "",
+    "Name": ""
+  }
+]
